@@ -185,7 +185,7 @@ for subject_name in subjects:
     if torch.cuda.is_available():
         model = model.cuda()
     
-    optimizer = SGD(model.parameters(), lr=0.01, momentum=0.9)
+    optimizer = SGD(model.parameters(), lr=0.001, momentum=0.9)
     criterion = MSELoss(reduction="sum")
     batch_size = 100
     val_size = None
